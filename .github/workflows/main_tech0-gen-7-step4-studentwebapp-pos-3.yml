@@ -36,7 +36,6 @@ jobs:
 
       - name: Zip artifact for deployment
         run: zip release.zip ./deploy -r
-
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
