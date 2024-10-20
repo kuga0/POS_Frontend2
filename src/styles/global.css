@@ -1,0 +1,101 @@
+/* global.css */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #0F172A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.section-title {
+  color: #0F172A;
+  margin-bottom: 10px;
+}
+
+.product-list, .purchase-list {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  max-height: 150px;
+  overflow-y: scroll;
+  background-color: #F9FAFB;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-item, .purchase-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.purchase-item.selected {
+  background-color: #E0E7FF;
+}
+
+.control-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1E3A8A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background-color: #0F172A;
+}
+
+.add-button, .remove-button {
+  margin-left: 10px;
+  padding: 5px;
+  background-color: #3B82F6;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-button:hover {
+  background-color: #1E40AF;
+}
+
+.remove-button {
+  background-color: #EF4444;
+}
+
+.remove-button:hover {
+  background-color: #B91C1C;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #F7F7F7;
+  color: #333;
+}
+
+.purchase-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1E3A8A;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.purchase-button:hover {
+  background-color: #0F172A;
+}
