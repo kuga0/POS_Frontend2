@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "typeRoots": ["./types", "./node_modules/@types"],
     "allowJs": true, // 必要に応じてJavaScriptファイルも使用可能に
     "skipLibCheck": true,
     "strict": true,
