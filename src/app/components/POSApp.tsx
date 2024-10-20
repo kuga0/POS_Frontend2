@@ -31,7 +31,8 @@ export default function POSApp() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const apiBaseUrl = 'https://tech0-gen-7-step4-studentwebapp-pos-4-gyazakdjdne5h0a3.eastus-01.azurewebsites.net';
+        console.log('Using hardcoded API URL:', apiBaseUrl);
         const response = await axios.get<Product[]>(`${apiBaseUrl}/products`);
         setProducts(response.data);
       } catch (error) {

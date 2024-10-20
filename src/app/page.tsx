@@ -6,13 +6,14 @@ import axios from 'axios';
 
 export default function HomePage() {
   const [greeting, setGreeting] = useState<string>('');
-  const [testVariable, setTestVariable] = useState<string | undefined>(undefined); // テスト用の環境変数
   const router = useRouter();
 
   useEffect(() => {
     const fetchGreeting = async () => {
       try {
+        // ここにバックエンドのURLを直打ち
         const apiBaseUrl = 'https://tech0-gen-7-step4-studentwebapp-pos-4-gyazakdjdne5h0a3.eastus-01.azurewebsites.net';
+        console.log('Using hardcoded API URL:', apiBaseUrl);
         const response = await axios.get<{ message: string }>(`${apiBaseUrl}/greeting`);
         setGreeting(response.data.message);
       } catch (error) {
@@ -20,11 +21,6 @@ export default function HomePage() {
       }
     };
     fetchGreeting();
-
-    // 環境変数のテスト用コード
-    const testValue = process.env.NEXT_PUBLIC_TEST_VARIABLE;
-    console.log('Test Variable from Azure:', testValue);
-    setTestVariable(testValue);
   }, []);
 
   return (
@@ -48,13 +44,8 @@ export default function HomePage() {
       >
         アプリを起動
       </button>
-
-      {/* 環境変数のテスト表示部分 */}
-      <div style={{ marginTop: '30px', backgroundColor: '#f3f4f6', padding: '20px', borderRadius: '8px' }}>
-        <h2>Test Variable:</h2>
-        <p>{testVariable ? testVariable : '環境変数が読み込まれていません'}</p>
-      </div>
     </div>
   );
 }
+
 
