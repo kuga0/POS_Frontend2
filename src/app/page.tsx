@@ -12,12 +12,13 @@ export default function HomePage() {
     const fetchGreeting = async () => {
       try {
         const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+        console.log('API Base URL:', apiBaseUrl);  // 確認のため追加
         const response = await axios.get<{ message: string }>(`${apiBaseUrl}/greeting`);
         setGreeting(response.data.message);
       } catch (error) {
         console.error('挨拶メッセージの取得に失敗しました:', error);
       }
-    };
+    };    
     fetchGreeting();
   }, []);
 
